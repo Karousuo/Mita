@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;600&display=swap");
+.theme {
+  --primary: #fcf8e8;
+  --secondary: #f7d59c;
+  --tertiary: #127c56;
+  --quaternary: #ffd449;
+  --strong-quaternary: #f9a620;
+  --quinary: #633d44;
+  --text-color: #3d262a;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+.theme--dark {
+  --primary: #3d262a;
+  --secondary: #633d44;
+  --tertiary: #ffd449;
+  --quaternary: #127c56;
+  --strong-quaternary: #0a4932;
+  --quinary: #f7d59c;
+  --text-color: #fcf8e8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 24px;
+  background-color: var(--primary);
+  font-family: "Azeret Mono", monospace;
+}
+
+.nav {
+  background: var(--quaternary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav__title {
+  font-size: 1.5em;
+  color: var(--strong-quaternary);
+  text-align: left;
+}
+.nav__title--it {
+  color: var(--primary);
+}
+.nav__pages {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+.nav__color-mode {
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

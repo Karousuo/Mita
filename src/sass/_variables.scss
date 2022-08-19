@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;600&display=swap');
+
+$primary: #fcf8e8;
+$secondary: #f7d59c;
+$tertiary: #127c56;
+$quaternary: #ffd449;
+$strong-quaternary: #f9a620;
+$quinary: #633d44;
+$text-color: #3d262a;
+$primary--dark: #3d262a;
+$secondary--dark: #633d44;
+$tertiary--dark: #ffd449;
+$quaternary--dark: #127c56;
+$strong-quaternary--dark: #0a4932;
+$quinary--dark: #f7d59c;
+$text-color--dark: #fcf8e8;
+$font: 'Azeret Mono', monospace;
+
+.theme {
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+    --tertiary: #{$tertiary};
+    --quaternary: #{$quaternary};
+    --strong-quaternary: #{$strong-quaternary};
+    --quinary: #{$quinary};
+    --text-color: #{$text-color};
+    transition: 0.4s ease-in-out;
+    &--dark {
+        --primary: #{$primary--dark};
+        --secondary: #{$secondary--dark};
+        --tertiary: #{$tertiary--dark};
+        --quaternary: #{$quaternary--dark};
+        --strong-quaternary: #{$strong-quaternary--dark};
+        --quinary: #{$quinary--dark};
+        --text-color: #{$text-color--dark};
+    }
+}

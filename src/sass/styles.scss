@@ -1,0 +1,28 @@
+@use 'variables';
+@use 'initial';
+
+.nav {
+    background: var(--quaternary);
+    display: flex;
+    padding: 16px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+        font-size: 1.5em;
+        color: var(--strong-quaternary);
+        text-align: left;
+        &--it {
+            color: var(--primary);
+        }
+    }
+    &__pages {
+        flex: 1;
+        text-align: right;
+    }
+    &__color-mode {
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+    }
+}
