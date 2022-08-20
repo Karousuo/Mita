@@ -1,0 +1,45 @@
+@use 'variables';
+
+.nav {
+    position: relative;
+    background: var(--quaternary);
+    display: flex;
+    padding: 16px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+        font-family: variables.$font-title;
+        font-size: 1.5em;
+        text-align: left;
+        &--it {
+            color: var(--primary);
+        }
+        & a {
+            text-decoration: none;
+            color: var(--strong-quaternary);
+        }
+    }
+    &__pages {
+        font-size: 0.75em;
+        flex: 1;
+        text-align: right;
+        padding-right: 32px;
+        padding-left: 32px;
+        & a {
+            padding: 16px;
+            color: var(--text-color);
+            text-decoration: none;
+            &:hover {
+                color: var(--strong-quaternary);
+            }
+        }
+    }
+    &__theme-mode {
+        background: var(--theme-icon);
+        background-size: contain;
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+    }
+}
