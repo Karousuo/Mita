@@ -23,8 +23,10 @@
             padding: 16px;
             color: var(--primary);
             box-sizing: border-box;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
             background-color: var(--tertiary);
-            ::after {
+            &::after {
                 content: "";
                 display: block;
                 height: 0.1em;
@@ -32,6 +34,7 @@
             }
         }
         &__body {
+            text-decoration: none;
             margin-top: 24px;
             border-radius: 12px;
             background-color: var(--weak);
@@ -40,10 +43,10 @@
             flex-wrap: nowrap;
             flex-direction: column-reverse;
             transition: transform 0.5s;
-            -webkit-transition: transform 0.5s;
-            -moz-transition: transform 0.5s;
-            -ms-transition: transform 0.5s;
-            -o-transition: transform 0.5s;
+            -webkit-transition: transform background-color 0.5s;
+            -moz-transition: transform background-color 0.5s;
+            -ms-transition: transform background-color 0.5s;
+            -o-transition: transform background-color 0.5s;
             &:hover {
                 cursor: pointer;
                 transform: scale(1.05);
