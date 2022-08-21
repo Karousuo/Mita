@@ -3,15 +3,17 @@
     <head>
         <title>Mita</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="../css/styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script defer src="../js/setPropierties.js""></script>
         <script src="../js/cookies.js"></script>
         <script src="../js/loadStorage.js"></script>
     </head>
     <body>
-        <div class="navbar-container">
+        <header class="header-nav">
             <nav class="nav">
-                <h1 class="nav__title">
+                <h1 class="nav__title" translate="no">
                     <a href="#inicio">
                         <span>M</span><!--
                         --><span class="nav__title--it">it</span><!--
@@ -24,23 +26,34 @@
                     <a href="#reviews">Reseñas</a>
                     <a href="#production">Producción</a>
                 </ul>
-                <div class="nav__theme-mode" id="icon"/>
+                <div class="nav__btns">
+                    <button class="nav__btns__theme-mode" id="icon"/>
+                    <button class="nav__btns__toogle" id="toogle"/>
+                </div>
             </nav>
             <script src="../js/cookies.js"></script>
-            <script src="../js/theme.js"></script>
-        </div>
-        <div class="main-container">
-            <div id="inicio" class="main-container__principal">
-                <div id="article-of-day">
-                    <div class="article__text">
-                        <div class="article__text--header">¿Porque las personas buscan la inmortalidad?</div>
-                        <div class="article__text--body">
-                            <p>Los hombres mueren: estas tres simples palabras encierran la gran tragedia privada y pública de nuestra especie. Somos artefactos biológicos construidos para no perdurar, para permanecer en activo unos pocos años antes de nuestra desintegración final. Esta verdad, tan difícil de aceptar por la conciencia, supone una condena y un reto. ¿De qué modo puede asumirse? ¿Se puede hacer algo al respecto? Desde hace unos años, una corriente tecno-científica llamada transhumanismo centra sus esfuerzos en investigación en rebatir el dominio de la muerte.</p>
+            <script src="../js/navbarEvents.js"></script>
+        </header>
+        <div class="content" id="inicio">
+            <main class="main">
+                <section class="main__principal">
+                    <div class="article-of-day">
+                        <h2 class="article-of-day__title"><p>Artículo del día</p></h2>
+                        <div class="article-of-day__body">
+                            <div class="article-of-day__body__text">
+                                <h2 class="article-of-day__body__text--header">¿Porque las personas buscan la inmortalidad?</h2>
+                                <h3 class="article-of-day__body__text--body">
+                                    <p>Los hombres mueren: estas tres simples palabras encierran la gran tragedia privada y pública de nuestra especie. Somos artefactos biológicos construidos para no perdurar, para permanecer en activo unos pocos años antes de nuestra desintegración final.</h>
+                                </h3>
+                            </div>
+                            <img class="article-of-day__image" loading="lazy" src="https://thumbs.dreamstime.com/b/cosmos-beauty-deep-space-elements-image-furnished-nasa-science-fiction-art-102581846.jpg">
                         </div>
                     </div>
-                    <img loading="lazy" src="https://images.ctfassets.net/hrltx12pl8hq/7JnR6tVVwDyUM8Cbci3GtJ/bf74366cff2ba271471725d0b0ef418c/shutterstock_376532611-og.jpg" class="article__image">
-                </div>
-            </div>
+                </section>
+            </main>
+            <div id="footer"></div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     </body>
 </html>

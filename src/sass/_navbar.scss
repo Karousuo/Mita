@@ -1,12 +1,16 @@
 @use 'variables';
-
+.header-nav {
+    width: 100%;
+    position: fixed;
+    z-index: 12;
+}
 .nav {
-    position: relative;
     background: var(--quaternary);
     display: flex;
     padding: 16px;
     margin: auto;
     align-items: center;
+    box-sizing: border-box;
     justify-content: space-between;
     &__title {
         font-family: variables.$font-title;
@@ -21,25 +25,51 @@
         }
     }
     &__pages {
-        font-size: 0.75em;
         flex: 1;
+        display: flex;
         text-align: right;
-        padding-right: 32px;
+        font-size: 0.75em;
+        max-width: 1200px;
         padding-left: 32px;
+        padding-right: 32px;
+        flex-direction: row;
+        box-sizing: border-box;
+        justify-content: flex-end;
         & a {
             padding: 16px;
-            color: var(--text-color);
             text-decoration: none;
+            box-sizing: border-box;
+            color: var(--text-color);
+            border-radius: 12px;
             &:hover {
-                color: var(--strong-quaternary);
+                color: var(--primary);
+                background: var(--tertiary);
             }
         }
     }
-    &__theme-mode {
-        background: var(--theme-icon);
-        background-size: contain;
-        width: 1.5em;
-        height: 1.5em;
-        cursor: pointer;
+    &__btns {
+        display: flex;
+        align-items: center;
+        max-width: 576px;
+        &__theme-mode {
+            margin: 8px;
+            border: none;
+            background: var(--theme-icon);
+            background-size: contain;
+            width: 2.75em;
+            height: 2.75em;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        &__toogle {
+            display: none;
+            margin: 8px 8px 8px 16px;
+            width: 2.75em;
+            height: 2.75em;
+            border: none;
+            background: var(--menu-icon);
+            background-size: contain;
+            box-sizing: border-box;
+        }
     }
 }

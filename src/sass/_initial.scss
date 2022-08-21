@@ -12,3 +12,17 @@ body {
     background-color: var(--primary);
     font-family: variables.$font;
 }
+
+.content {
+    width: 100%;
+    display:flex;
+    margin: 0 auto;
+    min-height:100vh;
+    min-width: 264px;
+    max-height: 992px;
+    flex-direction:column;
+    padding-top: 96px;
+}
+.main-container {
+  flex: 1;
+}

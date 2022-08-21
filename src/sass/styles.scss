@@ -1,46 +1,126 @@
 @use 'variables';
 @use 'initial';
 @use 'navbar';
+@use 'footer';
 
-.main-container__principal {
-    width: 90%;
-    height: 444px;
-    //border: 1px solid red;
+.main__principal {
+    width: 96%;
+    height: 100%;
     margin: auto;
     display: flex;
-    align-items: flex-end;
+    padding: 64px;
+    padding-top: 32px;
+    align-items: center;
+    box-sizing: border-box;
     justify-content: space-around;
-    & #article-of-day {
-        width: 90%;
-        height: 384px;
-        //border: 1px solid red;
-        border-radius: 12px;
-        background-color: var(--weak-quaternary);
-        display: flex;
-        &:hover {
-            cursor: pointer;
-        }
-        & .article__image {
-            width: 60%;
-            height: 100%;
-            object-fit: cover;
-            border-end-end-radius: 12px;
-            border-top-right-radius: 12px;
-        }
-        & .article__text {
-            color : var(--text-color);
-            width: 40%;
-            padding: 16px;
+    & .article-of-day {
+        min-width: 264px;
+        position: relative;
+        width: 80%;
+        &__title {
             text-align: center;
-            &--header {
-                padding: 8px;
-            }
-            &--body {
-                text-align: left;
-                font-weight: 400;
-                font-size: 0.70em;
-                padding: 10px;
+            margin: 8px 0 32px;
+            padding: 16px;
+            color: var(--primary);
+            box-sizing: border-box;
+            background-color: var(--tertiary);
+            ::after {
+                content: "";
+                display: block;
+                height: 0.1em;
+                background: var(--primary) repeat center center;
             }
         }
+        &__body {
+            margin-top: 24px;
+            border-radius: 12px;
+            background-color: var(--weak);
+            display: flex;
+            overflow: hidden;
+            flex-wrap: nowrap;
+            flex-direction: column-reverse;
+            transition: transform 0.5s;
+            -webkit-transition: transform 0.5s;
+            -moz-transition: transform 0.5s;
+            -ms-transition: transform 0.5s;
+            -o-transition: transform 0.5s;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                -moz-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                -o-transform: scale(1.05);
+                background-color: var(--strong-weak);
+            }
+            &__image {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+            &__text {
+                color: var(--text-color);
+                width: 100%;
+                padding: 16px;
+                box-sizing: border-box;
+                text-align: center;
+                &--header {
+                    padding: 8px;
+                    box-sizing: border-box;
+                }
+                &--body {
+                    font-weight: 400;
+                    font-size: 0.70em;
+                    padding: 8px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        align-content: flex-end;
+        &__pages {
+            position: fixed;
+            left: 100%;
+            top: 85px;
+            width: 100%;
+            padding: 20px 0;
+            height: calc(100% - 74px);
+            overflow-y: auto;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: var(--strong-quaternary);
+            &--visible {
+                left: 0%;
+            }
+            & a {
+                width: 100%;
+                border-radius: 0%;
+                text-align: center;
+                &:hover {
+                    color: var(--primary);
+                    background: var(--tertiary);
+                } 
+            }
+        }
+        &__btns__toogle {
+            display: block;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .main__principal {
+        width: 100%;
+        & .article-of-day {
+            width: 95%;
+        }
+    }
+    .footer__pages {
+        flex-direction: column;
+        margin: 0;
     }
 }

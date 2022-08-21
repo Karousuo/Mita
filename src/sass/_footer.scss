@@ -1,0 +1,35 @@
+.footer {
+    width: 100%;
+    display: flex;
+    padding: 24px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--tertiary);
+    &__pages {
+        font-size: 0.75em;
+        margin: 0 auto;
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        & a {
+            padding: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            box-sizing: border-box;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 12px;
+            &:hover {
+                color: var(--text-color);
+                background: var(--quaternary);
+            }
+        }
+    }
+    &__copyright {
+        font-size: 0.7em;
+        text-align: center;
+        color: var(--secondary);
+    }
+}

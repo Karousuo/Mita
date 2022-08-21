@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-$primary: #fcfaf2;
-$secondary: #FEE696;
-$tertiary: #127c56;
-$quaternary: #fbda9d;
-$weak-quaternary: #fff2cf;
-$strong-quaternary: #f4ae6a;
-$quinary: #524a4a;
+$primary: #fcf7ee;
+$secondary: #7fb4e6;
+$weak: #f5f7f9;
+$strong-weak: #e4f0f9;
+$tertiary: #277BC0;
+$quaternary: #ffbb28;
+$weak-quaternary: #fff197;
+$strong-quaternary: #ff9128;
+$quinary: #4e4747;
 $text-color: #2c2828;
 $primary--dark: #2c2828;
-$secondary--dark: #524a4a;
-$tertiary--dark: #fbda9d;
+$secondary--dark: #ff5e00;
+$weak--dark: #322d2d;
+$strong-weak--dark: #3d3737;
+$tertiary--dark: #ff9f29;
 $quaternary--dark: #127c56;
-$weak-quaternary--dark: #484040;
+$weak-quaternary--dark: #28b880;
 $strong-quaternary--dark: #0a4932;
-$quinary--dark: #FEE696;
-$text-color--dark: #fcfcf2;
+$quinary--dark: #e2ddd6;
+$text-color--dark: #fcf7ee;
 $font: 'Lato', sans-serif;
 $font-title: 'Azeret Mono', monospace;
 
@@ -24,6 +28,8 @@ $font-title: 'Azeret Mono', monospace;
 :root {
     --primary: #{$primary};
     --secondary: #{$secondary};
+    --weak: #{$weak};
+    --strong-weak: #{$strong-weak};
     --tertiary: #{$tertiary};
     --quaternary: #{$quaternary};
     --weak-quaternary: #{$weak-quaternary};
@@ -31,9 +37,12 @@ $font-title: 'Azeret Mono', monospace;
     --quinary: #{$quinary};
     --text-color: #{$text-color};
     --theme-icon: url('../images/moon.png');
+    --menu-icon: url('../images/menu.png');
     &.dark {
         --primary: #{$primary--dark};
         --secondary: #{$secondary--dark};
+        --weak: #{$weak--dark};
+        --strong-weak: #{$strong-weak--dark};
         --tertiary: #{$tertiary--dark};
         --quaternary: #{$quaternary--dark};
         --weak-quaternary: #{$weak-quaternary--dark};
@@ -41,5 +50,6 @@ $font-title: 'Azeret Mono', monospace;
         --quinary: #{$quinary--dark};
         --text-color: #{$text-color--dark};
         --theme-icon: url('../images/sun.png');
+        --menu-icon: url('../images/menu_dark.png');
     }
 }
